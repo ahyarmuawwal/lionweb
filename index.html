@@ -34,22 +34,32 @@
             border: 1px solid rgba(212, 175, 55, 0.4);
             box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
+        /* Custom scrollbar for modals */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.5);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(212, 175, 55, 0.4);
+            border-radius: 3px;
+        }
     </style>
 </head>
 <body class="luxury-bg min-h-screen flex flex-col items-center justify-center p-0 md:p-6">
 
-    <!-- WELCOME OVERVIEW / COVER MODAL -->
     <div id="welcome-screen" class="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-6 text-center transition-all duration-700">
         <div class="max-w-md w-full gold-card p-8 rounded-2xl relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-600/10 rounded-full blur-2xl"></div>
             
             <div class="flex justify-center items-center gap-4 mb-6">
-                <img src="LOGO LIONS INTS NEW.png" alt="Logo Lions Int" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
-                <img src="LOGO LIONS NEW.png" alt="Logo Lions Club" class="w-16 h-16 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
-                <img src="LOGO DG HERMIN FINAL.png" alt="Logo DG Hermin" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+                <img src="LOGO LIONS INTS NEW.png" alt="Logo Lions Int" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]" onerror="this.src='https://placehold.co/48x48/111/d4af37?text=LI'">
+                <img src="LOGO LIONS NEW.png" alt="Logo Lions Club" class="w-16 h-16 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]" onerror="this.src='https://placehold.co/64x64/111/d4af37?text=LC'">
+                <img src="LOGO DG HERMIN FINAL.png" alt="Logo DG Hermin" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]" onerror="this.src='https://placehold.co/48x48/111/d4af37?text=DG'">
             </div>
 
-            <p class="text-xs uppercase tracking-widest text-yellow-400 mb-2 font-cinzel">Undangan Eksklusif</p>
+            <p class="text-xs uppercase tracking-widest text-yellow-400 mb-2 font-cinzel">Undangan </p>
             <h1 class="text-2xl font-bold font-cinzel gold-gradient-text mb-4">Malam Syukuran 33 Tahun<br>Lions Club Makassar Host</h1>
             
             <div class="my-6 py-4 border-t border-b border-yellow-500/30">
@@ -64,20 +74,19 @@
         </div>
     </div>
 
-    <!-- MAIN INVITATION CONTAINER -->
     <div id="main-content" class="max-w-md w-full bg-[#0a0a0a] min-h-screen md:min-h-[90vh] md:rounded-3xl shadow-2xl overflow-hidden relative border border-yellow-600/30 hidden flex flex-col justify-between">
         
         <!-- HEADER LOGO BAR -->
         <div class="bg-black/80 backdrop-md py-3 px-6 border-b border-yellow-500/20 flex items-center justify-between sticky top-0 z-40">
-            <img src="LOGO LIONS INTS NEW.png" alt="Left Logo" class="w-9 h-9 object-contain">
-            <img src="LOGO LIONS NEW.png" alt="Center Logo" class="w-12 h-12 object-contain">
-            <img src="LOGO DG HERMIN FINAL.png" alt="Right Logo" class="w-9 h-9 object-contain">
+            <img src="LOGO LIONS INTS NEW.png" alt="Left Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/36x36/111/d4af37?text=LI'">
+            <img src="LOGO LIONS NEW.png" alt="Center Logo" class="w-12 h-12 object-contain" onerror="this.src='https://placehold.co/48x48/111/d4af37?text=LC'">
+            <img src="LOGO DG HERMIN FINAL.png" alt="Right Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/36x36/111/d4af37?text=DG'">
         </div>
 
         <div class="p-6 text-center space-y-6 flex-grow">
             <!-- HERO SECTION -->
             <div class="space-y-3 pt-2">
-                <h4 class="text-xs uppercase tracking-[0.3em] text-yellow-500 font-cinzel">Undangan Resmi</h4>
+                <h4 class="text-xs uppercase tracking-[0.3em] text-yellow-500 font-cinzel">Undangan</h4>
                 <h2 class="text-3xl font-extrabold font-cinzel gold-gradient-text leading-tight">MALAM SYUKURAN<br>33 TAHUN</h2>
                 <h3 class="text-xl font-bold text-white tracking-wide font-cinzel">LIONS CLUB MAKASSAR HOST</h3>
                 
@@ -180,10 +189,9 @@
                 </a>
             </div>
 
-            <!-- INTERACTIVE MODAL BUTTONS (RSVP & GUESTBOOK) -->
             <div class="grid grid-cols-2 gap-3">
-                <button onclick="openModal('rsvp-modal')" class="py-3 px-4 bg-yellow-600 hover:bg-yellow-500 text-black font-bold rounded-xl text-xs transition-all font-cinzel shadow-lg flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-envelope-circle-check"></i> RSVP E-TICKET
+                <button onclick="openModal('attendance-modal')" class="py-3 px-4 bg-yellow-600 hover:bg-yellow-500 text-black font-bold rounded-xl text-xs transition-all font-cinzel shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-clipboard-user"></i> KEHADIRAN
                 </button>
                 <button onclick="openModal('guestbook-modal')" class="py-3 px-4 bg-neutral-800 hover:bg-neutral-700 text-yellow-400 border border-yellow-500/40 font-bold rounded-xl text-xs transition-all font-cinzel shadow-lg flex items-center justify-center gap-2">
                     <i class="fa-solid fa-book-open"></i> BUKU TAMU
@@ -198,7 +206,7 @@
         </div>
     </div>
 
-    <!-- LOCAL MP4 AUDIO ELEMENT (LOOP) -->
+    <!-- LOCAL MP4 AUDIO ELEMENT -->
     <audio id="bg-audio" loop>
         <source src="musiksaya.mp4" type="audio/mp4">
     </audio>
@@ -208,66 +216,78 @@
         <i id="music-icon" class="fa-solid fa-music animate-spin"></i>
     </button>
 
-    <!-- RSVP MODAL -->
-    <div id="rsvp-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left">
-            <button onclick="closeModal('rsvp-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4">RSVP / E-Ticket Kehadiran</h3>
-            <form onsubmit="submitRSVP(event)" class="space-y-3">
+    <div id="attendance-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
+            <button onclick="closeModal('attendance-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white z-10"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-clipboard-user text-yellow-400"></i> Konfirmasi Kehadiran
+            </h3>
+            
+            <form onsubmit="submitAttendance(event)" class="space-y-3 mb-4">
                 <div>
                     <label class="text-xs text-gray-400">Nama Lengkap</label>
-                    <input type="text" id="rsvp-name" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                    <input type="text" id="att-name" required placeholder="Masukkan nama lengkap..." class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
                 </div>
                 <div>
-                    <label class="text-xs text-gray-400">Jumlah Hadir</label>
-                    <select id="rsvp-count" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
-                        <option value="1 Orang">1 Orang</option>
-                        <option value="2 Orang">2 Orang (Sesuai Ketentuan)</option>
-                    </select>
+                    <label class="text-xs text-gray-400">Nama Club</label>
+                    <input type="text" id="att-club" required placeholder="Contoh: LC Makassar Host" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
                 </div>
                 <div>
-                    <label class="text-xs text-gray-400">Status Kehadiran</label>
-                    <select id="rsvp-status" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                    <label class="text-xs text-gray-400">Pilihan Kehadiran</label>
+                    <select id="att-status" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
                         <option value="Hadir">Hadir</option>
-                        <option value="Berhalangan">Berhalangan Hadir</option>
+                        <option value="Tidak Hadir">Tidak Hadir</option>
                     </select>
                 </div>
-                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-2">GENERATE E-TICKET</button>
+                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-1 hover:bg-yellow-400 transition-all shadow-md">
+                    SIMPAN KEHADIRAN
+                </button>
             </form>
-            <div id="e-ticket-result" class="mt-4 hidden p-3 bg-neutral-900 border border-yellow-500/50 rounded-xl text-center">
-                <p class="text-xs text-yellow-400 font-bold uppercase">E-Ticket Berhasil Dibuat!</p>
-                <p id="ticket-info" class="text-xs text-gray-300 mt-1"></p>
+
+            <div class="border-t border-yellow-500/20 pt-3 flex-grow flex flex-col min-h-0">
+                <p class="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-2 font-cinzel">Daftar Kehadiran Tamu (<span id="att-count-badge">0</span>)</p>
+                <div id="attendance-list" class="overflow-y-auto space-y-2 pr-1 text-xs flex-grow max-h-48">
+                    <!-- Dynamic attendance list items will be injected here -->
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- GUESTBOOK MODAL -->
-    <div id="guestbook-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left">
-            <button onclick="closeModal('guestbook-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
-            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4">Buku Tamu & Ucapan</h3>
-            <form onsubmit="submitWish(event)" class="space-y-3">
+    <div id="guestbook-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
+            <button onclick="closeModal('guestbook-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white z-10"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-book-open text-yellow-400"></i> Buku Tamu & Ucapan
+            </h3>
+            
+            <form onsubmit="submitWish(event)" class="space-y-3 mb-4">
                 <div>
                     <label class="text-xs text-gray-400">Nama</label>
                     <input type="text" id="wish-name" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
                 </div>
                 <div>
                     <label class="text-xs text-gray-400">Ucapan & Doa</label>
-                    <textarea id="wish-msg" rows="3" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400"></textarea>
+                    <textarea id="wish-msg" rows="3" required placeholder="Tuliskan ucapan dan doa terbaik..." class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400"></textarea>
                 </div>
-                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-2">KIRIM UCAPAN</button>
+                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-1 hover:bg-yellow-400 transition-all shadow-md">
+                    KIRIM UCAPAN
+                </button>
             </form>
-            <div id="wishes-list" class="mt-4 max-h-40 overflow-y-auto space-y-2 pr-1 text-xs">
-                <div class="p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl">
-                    <p class="font-bold text-yellow-400">Lion Andi & Keluarga</p>
-                    <p class="text-gray-300 mt-0.5">Selamat Milad ke-33 Lions Club Makassar Host. Sukses selalu dan semakin berjaya dalam pengabdian!</p>
+
+            <div class="border-t border-yellow-500/20 pt-3 flex-grow flex flex-col min-h-0">
+                <p class="text-xs font-bold text-yellow-400 uppercase tracking-widest mb-2 font-cinzel">Ucapan Tamu</p>
+                <div id="wishes-list" class="overflow-y-auto space-y-2 pr-1 text-xs flex-grow max-h-48">
+                    <!-- Dynamic wishes will be injected here -->
                 </div>
             </div>
         </div>
     </div>
 
     <script>
-        // FITUR DINAMIS NAMA TAMU DARI URL PARAMETER (contoh: ?to=Ali)
+        // URL WEB APP GOOGLE APPS SCRIPT (Ganti dengan URL /exec Anda)
+        const WEB_APP_URL = "https://script.google.com/macros/s/AKfycby2d34ghUVeN4tg5kKuuR-jcK_fagm-XQ2ML4CUMESsFZV5gzeaOMbAW6NiLVNr2uu-GQ/exec";
+
+        // FITUR DINAMIS NAMA TAMU DARI URL PARAMETER (contoh: ?to=NamaTamu)
         window.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const guestParam = urlParams.get('to');
@@ -276,9 +296,13 @@
                 const formattedName = decodeURIComponent(guestParam).replace(/\b\w/g, l => l.toUpperCase());
                 document.getElementById('guest-name-cover').innerText = formattedName;
                 document.getElementById('guest-name-content').innerText = formattedName;
-                document.getElementById('rsvp-name').value = formattedName;
+                document.getElementById('att-name').value = formattedName;
                 document.getElementById('wish-name').value = formattedName;
             }
+
+            // Load data kehadiran & buku tamu dari Google Sheets / Local
+            loadAttendanceData();
+            loadWishesData();
         });
 
         // COUNTDOWN TIMER KE 9 OKTOBER 2026 18:00 WITA
@@ -305,7 +329,6 @@
                 document.getElementById('main-content').classList.remove('hidden');
                 document.getElementById('music-toggle').classList.remove('hidden');
                 
-                // Play audio lokal musiksaya.mp4
                 audioEl.play().then(() => {
                     isPlaying = true;
                 }).catch(error => {
@@ -337,31 +360,156 @@
         function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
         function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
 
-        // RSVP SUBMISSION HANDLER
-        function submitRSVP(e) {
+        // KEHADIRAN HANDLER TERHUBUNG KE GOOGLE SHEETS
+        async function submitAttendance(e) {
             e.preventDefault();
-            const name = document.getElementById('rsvp-name').value;
-            const count = document.getElementById('rsvp-count').value;
-            const status = document.getElementById('rsvp-status').value;
+            const name = document.getElementById('att-name').value.trim();
+            const club = document.getElementById('att-club').value.trim();
+            const status = document.getElementById('att-status').value;
             
-            document.getElementById('ticket-info').innerHTML = `<b>${name}</b> (${count})<br>Status: <b>${status}</b><br><span class='text-[10px] text-yellow-400'>ID E-Ticket: LCMH-2026-${Math.floor(Math.random()*90000+10000)}</span>`;
-            document.getElementById('e-ticket-result').classList.remove('hidden');
+            if (!name || !club) return;
+
+            showNotification("Menyimpan kehadiran...");
+
+            const formData = {
+                name: name,
+                club: club,
+                status: status
+            };
+
+            try {
+                await fetch(WEB_APP_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                showNotification("Konfirmasi kehadiran berhasil disimpan!");
+                document.getElementById('att-club').value = '';
+                
+                // Refresh data kehadiran setelah 2 detik agar masuk ke list
+                setTimeout(loadAttendanceData, 2000);
+
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification("Gagal menyimpan data. Periksa koneksi Anda.");
+            }
         }
 
-        // GUESTBOOK WISHES SUBMISSION
+        async function loadAttendanceData() {
+            const listEl = document.getElementById('attendance-list');
+            const badgeEl = document.getElementById('att-count-badge');
+            
+            listEl.innerHTML = `<div class="p-3 bg-black/40 border border-yellow-500/10 rounded-xl text-center text-gray-400">Memuat data kehadiran...</div>`;
+
+            try {
+                const response = await fetch(WEB_APP_URL);
+                const attendanceList = await response.json();
+                
+                badgeEl.innerText = attendanceList.length;
+
+                if (attendanceList.length === 0) {
+                    listEl.innerHTML = `<div class="p-3 bg-black/40 border border-yellow-500/10 rounded-xl text-center text-gray-500">Belum ada data kehadiran yang tercatat.</div>`;
+                    return;
+                }
+
+                listEl.innerHTML = '';
+                attendanceList.forEach(item => {
+                    const statusColor = item.status === 'Hadir' ? 'text-emerald-400 bg-emerald-950/40 border-emerald-500/30' : 'text-rose-400 bg-rose-950/40 border-rose-500/30';
+                    const div = document.createElement('div');
+                    div.className = "p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl space-y-1";
+                    div.innerHTML = `
+                        <div class="flex justify-between items-start">
+                            <span class="font-bold text-yellow-400">${escapeHtml(item.name)}</span>
+                            <span class="px-2 py-0.5 rounded-full text-[10px] font-semibold border ${statusColor}">${item.status}</span>
+                        </div>
+                        <div class="text-[11px] text-gray-300 flex justify-between">
+                            <span><i class="fa-solid fa-shield-halved text-yellow-500/70 mr-1"></i> ${escapeHtml(item.club)}</span>
+                            <span class="text-gray-500">${item.time}</span>
+                        </div>
+                    `;
+                    listEl.appendChild(div);
+                });
+            } catch (error) {
+                console.error('Error loading data:', error);
+                listEl.innerHTML = `<div class="p-3 bg-black/40 border border-yellow-500/10 rounded-xl text-center text-rose-400">Gagal memuat daftar kehadiran.</div>`;
+            }
+        }
+
+        // BUKU TAMU UCAPAN HANDLER DENGAN LOCALSTORAGE
         function submitWish(e) {
             e.preventDefault();
-            const name = document.getElementById('wish-name').value;
-            const msg = document.getElementById('wish-msg').value;
+            const name = document.getElementById('wish-name').value.trim();
+            const msg = document.getElementById('wish-msg').value.trim();
             
-            const list = document.getElementById('wishes-list');
-            const newWish = document.createElement('div');
-            newWish.className = "p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl";
-            newWish.innerHTML = `<p class="font-bold text-yellow-400">${name}</p><p class="text-gray-300 mt-0.5">${msg}</p>`;
-            list.prepend(newWish);
-            
+            if (!name || !msg) return;
+
+            const newWish = {
+                name: name,
+                msg: msg,
+                time: new Date().toLocaleDateString('id-ID', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' })
+            };
+
+            let wishesList = JSON.parse(localStorage.getItem('lions_wishes')) || [];
+            wishesList.unshift(newWish);
+            localStorage.setItem('lions_wishes', JSON.stringify(wishesList));
+
+            renderWishesList();
             document.getElementById('wish-msg').value = '';
-            alert("Ucapan berhasil dikirim!");
+            showNotification("Ucapan berhasil dikirim!");
+        }
+
+        function loadWishesData() {
+            let wishesList = JSON.parse(localStorage.getItem('lions_wishes'));
+            if (!wishesList || wishesList.length === 0) {
+                wishesList = [{
+                    name: "Lion Andi & Keluarga",
+                    msg: "Selamat Milad ke-33 Lions Club Makassar Host. Sukses selalu dan semakin berjaya dalam pengabdian!",
+                    time: "Hari ini"
+                }];
+                localStorage.setItem('lions_wishes', JSON.stringify(wishesList));
+            }
+            renderWishesList();
+        }
+
+        function renderWishesList() {
+            const listEl = document.getElementById('wishes-list');
+            let wishesList = JSON.parse(localStorage.getItem('lions_wishes')) || [];
+            
+            listEl.innerHTML = '';
+            wishesList.forEach(item => {
+                const div = document.createElement('div');
+                div.className = "p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl";
+                div.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-yellow-400">${escapeHtml(item.name)}</span>
+                        <span class="text-[10px] text-gray-500">${item.time}</span>
+                    </div>
+                    <p class="text-gray-300 mt-1">${escapeHtml(item.msg)}</p>
+                `;
+                listEl.appendChild(div);
+            });
+        }
+
+        // Helper untuk XSS prevention sederhana
+        function escapeHtml(text) {
+            const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+            return text.replace(/[&<>"']/g, m => map[m]);
+        }
+
+        // Custom notification helper tanpa alert()
+        function showNotification(message) {
+            const notif = document.createElement('div');
+            notif.className = "fixed top-5 left-1/2 transform -translate-x-1/2 z-50 bg-yellow-500 text-black px-4 py-2 rounded-xl text-xs font-bold shadow-2xl transition-all duration-300 font-cinzel";
+            notif.innerText = message;
+            document.body.appendChild(notif);
+            setTimeout(() => {
+                notif.style.opacity = '0';
+                setTimeout(() => notif.remove(), 300);
+            }, 2500);
         }
     </script>
 </body>
