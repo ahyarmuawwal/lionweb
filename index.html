@@ -39,6 +39,21 @@
             border: 1.5px solid rgba(212, 175, 55, 0.6);
             box-shadow: 0 10px 30px rgba(0,0,0,0.9);
         }
+        /* Efek Coret Silang Diagonal Khusus pada Icon */
+        .icon-strike-container {
+            position: relative;
+        }
+        .icon-strike-container::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 15%;
+            width: 70%;
+            height: 2px;
+            background-color: #ef4444; /* Warna merah penanda silang */
+            transform: translateY(-50%) rotate(-45deg);
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.8);
+        }
         /* Custom scrollbar for modals */
         ::-webkit-scrollbar {
             width: 6px;
@@ -182,19 +197,19 @@
                 </div>
             </div>
 
-            <!-- SECTION IKON REFERENSI (NO FLOWER, NO PRESENT, ENVELOPE ONLY) - EDITED TO GOLD -->
+            <!-- SECTION IKON REFERENSI (NO FLOWER, NO PRESENT, ENVELOPE ONLY) - ICON ASLI WARNA EMAS + DICORET SILANG -->
             <div class="gold-card p-4 rounded-2xl">
                 <div class="grid grid-cols-3 gap-2 text-center items-center">
                     <!-- No Flower -->
                     <div class="flex flex-col items-center p-2">
-                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 border border-yellow-500/50 flex items-center justify-center text-yellow-400 mb-1.5 shadow-[0_0_8px_rgba(212,175,55,0.4)]">
+                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 border border-yellow-500/50 flex items-center justify-center text-yellow-400 mb-1.5 icon-strike-container shadow-[0_0_8px_rgba(212,175,55,0.4)]">
                             <i class="fa-solid fa-spa text-base"></i>
                         </div>
                         <span class="text-[10px] font-semibold text-yellow-400/80 tracking-wider line-through">NO FLOWER</span>
                     </div>
                     <!-- No Present -->
                     <div class="flex flex-col items-center p-2">
-                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 border border-yellow-500/50 flex items-center justify-center text-yellow-400 mb-1.5 shadow-[0_0_8px_rgba(212,175,55,0.4)]">
+                        <div class="w-10 h-10 rounded-full bg-yellow-500/20 border border-yellow-500/50 flex items-center justify-center text-yellow-400 mb-1.5 icon-strike-container shadow-[0_0_8px_rgba(212,175,55,0.4)]">
                             <i class="fa-solid fa-gift text-base"></i>
                         </div>
                         <span class="text-[10px] font-semibold text-yellow-400/80 tracking-wider line-through">NO PRESENT</span>
