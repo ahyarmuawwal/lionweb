@@ -10,19 +10,24 @@
     <style>
         body {
             font-family: 'Plus Jakarta Sans', sans-serif;
-            background-color: #0c0c0c;
+            background-color: #000000;
             color: #f3f4f6;
             overflow-x: hidden;
         }
         .font-cinzel {
             font-family: 'Cinzel', serif;
         }
-        /* Polkadot & Luxury Background Pattern */
+        /* Tema Polkadot Hitam Putih Cerah Menyerupai Referensi */
         .luxury-bg {
-            background-color: #050505;
-            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #050505 0.75px);
-            background-size: 30px 30px;
-            background-position: 0 0, 15px 15px;
+            background-color: #000000;
+            background-image: radial-gradient(#ffffff 22%, transparent 22%);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px;
+        }
+        .polkadot-accent {
+            background-color: rgba(10, 10, 10, 0.95);
+            background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1.5px, transparent 1.5px);
+            background-size: 24px 24px;
         }
         .gold-gradient-text {
             background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
@@ -30,9 +35,9 @@
             -webkit-text-fill-color: transparent;
         }
         .gold-card {
-            background: rgba(18, 18, 18, 0.9);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+            background: rgba(15, 15, 15, 0.95);
+            border: 1.5px solid rgba(212, 175, 55, 0.6);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.9);
         }
         /* Custom scrollbar for modals */
         ::-webkit-scrollbar {
@@ -50,7 +55,7 @@
 <body class="luxury-bg min-h-screen flex flex-col items-center justify-center p-0 md:p-6">
 
     <div id="welcome-screen" class="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-6 text-center transition-all duration-700">
-        <div class="max-w-md w-full gold-card p-8 rounded-2xl relative overflow-hidden">
+        <div class="max-w-md w-full gold-card polkadot-accent p-8 rounded-2xl relative overflow-hidden">
             <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-600/10 rounded-full blur-2xl"></div>
             
             <div class="flex justify-center items-center gap-4 mb-6">
@@ -74,16 +79,16 @@
         </div>
     </div>
 
-    <div id="main-content" class="max-w-md w-full bg-[#0a0a0a] min-h-screen md:min-h-[90vh] md:rounded-3xl shadow-2xl overflow-hidden relative border border-yellow-600/30 hidden flex flex-col justify-between">
+    <div id="main-content" class="max-w-md w-full bg-[#080808] min-h-screen md:min-h-[90vh] md:rounded-3xl shadow-2xl overflow-hidden relative border border-yellow-600/40 hidden flex flex-col justify-between">
         
         <!-- HEADER LOGO BAR -->
-        <div class="bg-black/80 backdrop-md py-3 px-6 border-b border-yellow-500/20 flex items-center justify-between sticky top-0 z-40">
+        <div class="bg-black/90 backdrop-md py-3 px-6 border-b border-yellow-500/20 flex items-center justify-between sticky top-0 z-40">
             <img src="LOGO LIONS INTS NEW.png" alt="Left Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/36x36/111/d4af37?text=LI'">
             <img src="LOGO LIONS NEW.png" alt="Center Logo" class="w-12 h-12 object-contain" onerror="this.src='https://placehold.co/48x48/111/d4af37?text=LC'">
             <img src="LOGO DG HERMIN FINAL.png" alt="Right Logo" class="w-9 h-9 object-contain" onerror="this.src='https://placehold.co/36x36/111/d4af37?text=DG'">
         </div>
 
-        <div class="p-6 text-center space-y-6 flex-grow">
+        <div class="p-6 text-center space-y-6 flex-grow polkadot-accent">
             <!-- HERO SECTION -->
             <div class="space-y-3 pt-2">
                 <h4 class="text-xs uppercase tracking-[0.3em] text-yellow-500 font-cinzel">Undangan</h4>
@@ -96,7 +101,7 @@
             </div>
 
             <!-- INVITATION STATEMENT -->
-            <div class="bg-neutral-900/80 p-4 rounded-xl border border-yellow-500/20 text-sm text-gray-300">
+            <div class="bg-neutral-900/90 p-4 rounded-xl border border-yellow-500/30 text-sm text-gray-300">
                 Dengan hormat kami mengundang Bapak/Ibu/Saudara/i:
                 <div class="text-yellow-400 font-bold text-lg font-cinzel my-1" id="guest-name-content">Tamu Undangan</div>
             </div>
@@ -138,22 +143,22 @@
             </div>
 
             <!-- COUNTDOWN TIMER -->
-            <div class="bg-neutral-900/60 p-4 rounded-2xl border border-yellow-500/20">
+            <div class="bg-neutral-900/80 p-4 rounded-2xl border border-yellow-500/30">
                 <p class="text-xs uppercase tracking-widest text-yellow-400 mb-3 font-cinzel">Menuju Acara</p>
                 <div class="grid grid-cols-4 gap-2 text-center">
-                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                    <div class="bg-black/60 p-2 rounded-lg border border-yellow-500/20">
                         <span id="days" class="text-xl font-bold text-yellow-400">00</span>
                         <p class="text-[10px] text-gray-400 uppercase">Hari</p>
                     </div>
-                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                    <div class="bg-black/60 p-2 rounded-lg border border-yellow-500/20">
                         <span id="hours" class="text-xl font-bold text-yellow-400">00</span>
                         <p class="text-[10px] text-gray-400 uppercase">Jam</p>
                     </div>
-                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                    <div class="bg-black/60 p-2 rounded-lg border border-yellow-500/20">
                         <span id="minutes" class="text-xl font-bold text-yellow-400">00</span>
                         <p class="text-[10px] text-gray-400 uppercase">Menit</p>
                     </div>
-                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                    <div class="bg-black/60 p-2 rounded-lg border border-yellow-500/20">
                         <span id="seconds" class="text-xl font-bold text-yellow-400">00</span>
                         <p class="text-[10px] text-gray-400 uppercase">Detik</p>
                     </div>
@@ -164,12 +169,12 @@
             <div class="gold-card p-4 rounded-2xl">
                 <h4 class="text-xs uppercase tracking-widest text-yellow-400 mb-3 font-cinzel">Dress Code</h4>
                 <div class="grid grid-cols-2 gap-3 text-xs">
-                    <div class="bg-black/40 p-3 rounded-xl border border-yellow-500/20">
+                    <div class="bg-black/50 p-3 rounded-xl border border-yellow-500/20">
                         <i class="fa-solid fa-user-tie text-yellow-400 text-lg mb-1"></i>
                         <p class="font-bold text-white">Gentlemen</p>
                         <p class="text-gray-400 mt-1">Black & White<br>Black Vest + Bow Tie</p>
                     </div>
-                    <div class="bg-black/40 p-3 rounded-xl border border-yellow-500/20">
+                    <div class="bg-black/50 p-3 rounded-xl border border-yellow-500/20">
                         <i class="fa-solid fa-person-dress text-yellow-400 text-lg mb-1"></i>
                         <p class="font-bold text-white">Ladies</p>
                         <p class="text-gray-400 mt-1">Polkadot Black & White</p>
@@ -178,7 +183,7 @@
             </div>
 
             <!-- KONFIRMASI PIC -->
-            <div class="bg-emerald-950/30 border border-emerald-500/40 p-4 rounded-2xl flex items-center justify-between">
+            <div class="bg-emerald-950/40 border border-emerald-500/40 p-4 rounded-2xl flex items-center justify-between">
                 <div class="text-left">
                     <p class="text-xs text-gray-400">Konfirmasi PIC:</p>
                     <p class="text-sm font-bold text-white">Lion Lanny Lisana</p>
@@ -200,7 +205,7 @@
         </div>
 
         <!-- FOOTER INFO -->
-        <div class="py-4 bg-black/90 text-center border-t border-yellow-500/20 text-xs text-gray-400">
+        <div class="py-4 bg-black/95 text-center border-t border-yellow-500/20 text-xs text-gray-400">
             <p>Mohon konfirmasi kehadiran sebelum 5 Oktober 2026</p>
             <p class="text-[10px] text-gray-500 mt-1">Undangan berlaku untuk 2 orang • Lions Club Makassar Host</p>
         </div>
@@ -217,7 +222,7 @@
     </button>
 
     <div id="attendance-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
+        <div class="gold-card polkadot-accent max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
             <button onclick="closeModal('attendance-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white z-10"><i class="fa-solid fa-xmark text-lg"></i></button>
             <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-clipboard-user text-yellow-400"></i> Konfirmasi Kehadiran
@@ -254,7 +259,7 @@
     </div>
 
     <div id="guestbook-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-sm hidden flex items-center justify-center p-4">
-        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
+        <div class="gold-card polkadot-accent max-w-md w-full p-6 rounded-2xl relative text-left max-h-[90vh] flex flex-col">
             <button onclick="closeModal('guestbook-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white z-10"><i class="fa-solid fa-xmark text-lg"></i></button>
             <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4 flex items-center gap-2">
                 <i class="fa-solid fa-book-open text-yellow-400"></i> Buku Tamu & Ucapan
