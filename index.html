@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malam Syukuran 33 Tahun Lions Club Makassar Host</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0c0c0c;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+        }
+        /* Polkadot & Luxury Background Pattern */
+        .luxury-bg {
+            background-color: #050505;
+            background-image: radial-gradient(#d4af37 0.75px, transparent 0.75px), radial-gradient(#d4af37 0.75px, #050505 0.75px);
+            background-size: 30px 30px;
+            background-position: 0 0, 15px 15px;
+        }
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #bf953f 0%, #fcf6ba 25%, #b38728 50%, #fbf5b7 75%, #aa771c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gold-card {
+            background: rgba(18, 18, 18, 0.9);
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        }
+    </style>
+</head>
+<body class="luxury-bg min-h-screen flex flex-col items-center justify-center p-0 md:p-6">
+
+    <!-- WELCOME OVERVIEW / COVER MODAL -->
+    <div id="welcome-screen" class="fixed inset-0 z-50 bg-black/95 flex flex-col items-center justify-center p-6 text-center transition-all duration-700">
+        <div class="max-w-md w-full gold-card p-8 rounded-2xl relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 w-32 h-32 bg-yellow-600/10 rounded-full blur-2xl"></div>
+            
+            <div class="flex justify-center items-center gap-4 mb-6">
+                <img src="LOGO LIONS INTS NEW.png" alt="Logo Lions Int" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+                <img src="LOGO LIONS NEW.png" alt="Logo Lions Club" class="w-16 h-16 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+                <img src="LOGO DG HERMIN FINAL.png" alt="Logo DG Hermin" class="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(212,175,55,0.5)]">
+            </div>
+
+            <p class="text-xs uppercase tracking-widest text-yellow-400 mb-2 font-cinzel">Undangan Eksklusif</p>
+            <h1 class="text-2xl font-bold font-cinzel gold-gradient-text mb-4">Malam Syukuran 33 Tahun<br>Lions Club Makassar Host</h1>
+            
+            <div class="my-6 py-4 border-t border-b border-yellow-500/30">
+                <p class="text-sm text-gray-300 mb-1">Kepada Yth. Bapak/Ibu/Saudara/i:</p>
+                <h3 id="guest-name-cover" class="text-xl font-bold text-yellow-300 font-cinzel">Tamu Undangan</h3>
+                <p class="text-xs text-gray-400 mt-2">*(Undangan berlaku untuk 2 orang)*</p>
+            </div>
+
+            <button onclick="openInvitation()" class="w-full py-3 px-6 bg-gradient-to-r from-yellow-600 via-yellow-500 to-yellow-700 text-black font-bold rounded-xl shadow-lg hover:scale-105 transition-all font-cinzel tracking-wider flex items-center justify-center gap-2">
+                <i class="fa-solid fa-envelope-open-text"></i> BUKA UNDANGAN
+            </button>
+        </div>
+    </div>
+
+    <!-- MAIN INVITATION CONTAINER -->
+    <div id="main-content" class="max-w-md w-full bg-[#0a0a0a] min-h-screen md:min-h-[90vh] md:rounded-3xl shadow-2xl overflow-hidden relative border border-yellow-600/30 hidden flex flex-col justify-between">
+        
+        <!-- HEADER LOGO BAR -->
+        <div class="bg-black/80 backdrop-md py-3 px-6 border-b border-yellow-500/20 flex items-center justify-between sticky top-0 z-40">
+            <img src="LOGO LIONS INTS NEW.png" alt="Left Logo" class="w-9 h-9 object-contain">
+            <img src="LOGO LIONS NEW.png" alt="Center Logo" class="w-12 h-12 object-contain">
+            <img src="LOGO DG HERMIN FINAL.png" alt="Right Logo" class="w-9 h-9 object-contain">
+        </div>
+
+        <div class="p-6 text-center space-y-6 flex-grow">
+            <!-- HERO SECTION -->
+            <div class="space-y-3 pt-2">
+                <h4 class="text-xs uppercase tracking-[0.3em] text-yellow-500 font-cinzel">Undangan Resmi</h4>
+                <h2 class="text-3xl font-extrabold font-cinzel gold-gradient-text leading-tight">MALAM SYUKURAN<br>33 TAHUN</h2>
+                <h3 class="text-xl font-bold text-white tracking-wide font-cinzel">LIONS CLUB MAKASSAR HOST</h3>
+                
+                <div class="inline-block px-4 py-1.5 rounded-full bg-yellow-500/10 border border-yellow-500/40 text-yellow-300 text-xs tracking-wider mt-2 font-semibold">
+                    "Satu Hati ❤ Peduli Kasih / Unity in Service"
+                </div>
+            </div>
+
+            <!-- INVITATION STATEMENT -->
+            <div class="bg-neutral-900/80 p-4 rounded-xl border border-yellow-500/20 text-sm text-gray-300">
+                Dengan hormat kami mengundang Bapak/Ibu/Saudara/i:
+                <div class="text-yellow-400 font-bold text-lg font-cinzel my-1" id="guest-name-content">Tamu Undangan</div>
+            </div>
+
+            <!-- EVENT DETAILS CARD -->
+            <div class="gold-card p-5 rounded-2xl space-y-4 text-left">
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-calendar-days text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Hari & Tanggal</p>
+                        <p class="text-white font-semibold">Hari Jumat, 9 Oktober 2026</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-clock text-lg"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Waktu Acara</p>
+                        <p class="text-white font-semibold">Pukul 18:00 WITA - Selesai</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4">
+                    <div class="w-10 h-10 rounded-full bg-yellow-500/10 flex items-center justify-center text-yellow-400 flex-shrink-0 mt-1">
+                        <i class="fa-solid fa-location-dot text-lg"></i>
+                    </div>
+                    <div class="w-full">
+                        <p class="text-xs text-gray-400 uppercase tracking-wider">Lokasi</p>
+                        <p class="text-white font-semibold mb-2">Hotel Remcy Makassar</p>
+                        <a href="https://maps.app.goo.gl/Qn2MQSzJ3eoWPWQa7" target="_blank" class="inline-flex items-center gap-2 px-3 py-1.5 bg-yellow-500/20 border border-yellow-500/50 hover:bg-yellow-500 hover:text-black text-yellow-300 text-xs font-bold rounded-lg transition-all w-full justify-center">
+                            <i class="fa-solid fa-map-location-dot"></i> Buka Peta Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- COUNTDOWN TIMER -->
+            <div class="bg-neutral-900/60 p-4 rounded-2xl border border-yellow-500/20">
+                <p class="text-xs uppercase tracking-widest text-yellow-400 mb-3 font-cinzel">Menuju Acara</p>
+                <div class="grid grid-cols-4 gap-2 text-center">
+                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                        <span id="days" class="text-xl font-bold text-yellow-400">00</span>
+                        <p class="text-[10px] text-gray-400 uppercase">Hari</p>
+                    </div>
+                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                        <span id="hours" class="text-xl font-bold text-yellow-400">00</span>
+                        <p class="text-[10px] text-gray-400 uppercase">Jam</p>
+                    </div>
+                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                        <span id="minutes" class="text-xl font-bold text-yellow-400">00</span>
+                        <p class="text-[10px] text-gray-400 uppercase">Menit</p>
+                    </div>
+                    <div class="bg-black/50 p-2 rounded-lg border border-yellow-500/20">
+                        <span id="seconds" class="text-xl font-bold text-yellow-400">00</span>
+                        <p class="text-[10px] text-gray-400 uppercase">Detik</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DRESS CODE SECTION -->
+            <div class="gold-card p-4 rounded-2xl">
+                <h4 class="text-xs uppercase tracking-widest text-yellow-400 mb-3 font-cinzel">Dress Code</h4>
+                <div class="grid grid-cols-2 gap-3 text-xs">
+                    <div class="bg-black/40 p-3 rounded-xl border border-yellow-500/20">
+                        <i class="fa-solid fa-user-tie text-yellow-400 text-lg mb-1"></i>
+                        <p class="font-bold text-white">Gentlemen</p>
+                        <p class="text-gray-400 mt-1">Black & White<br>Black Vest + Bow Tie</p>
+                    </div>
+                    <div class="bg-black/40 p-3 rounded-xl border border-yellow-500/20">
+                        <i class="fa-solid fa-person-dress text-yellow-400 text-lg mb-1"></i>
+                        <p class="font-bold text-white">Ladies</p>
+                        <p class="text-gray-400 mt-1">Polkadot Black & White</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KONFIRMASI PIC -->
+            <div class="bg-emerald-950/30 border border-emerald-500/40 p-4 rounded-2xl flex items-center justify-between">
+                <div class="text-left">
+                    <p class="text-xs text-gray-400">Konfirmasi PIC:</p>
+                    <p class="text-sm font-bold text-white">Lion Lanny Lisana</p>
+                    <p class="text-xs text-emerald-400 font-semibold">WA: 081253352618</p>
+                </div>
+                <a href="https://wa.me/6281253352618?text=Halo%20Lion%20Lanny,%20saya%20konfirmasi%20hadir%20di%20Malam%20Syukuran%2033%20Tahun%20Lions%20Club%20Makassar%20Host" target="_blank" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white rounded-xl text-xs font-bold transition-all shadow-lg flex items-center gap-1.5">
+                    <i class="fa-brands fa-whatsapp text-sm"></i> Chat
+                </a>
+            </div>
+
+            <!-- INTERACTIVE MODAL BUTTONS (RSVP & GUESTBOOK) -->
+            <div class="grid grid-cols-2 gap-3">
+                <button onclick="openModal('rsvp-modal')" class="py-3 px-4 bg-yellow-600 hover:bg-yellow-500 text-black font-bold rounded-xl text-xs transition-all font-cinzel shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-envelope-circle-check"></i> RSVP E-TICKET
+                </button>
+                <button onclick="openModal('guestbook-modal')" class="py-3 px-4 bg-neutral-800 hover:bg-neutral-700 text-yellow-400 border border-yellow-500/40 font-bold rounded-xl text-xs transition-all font-cinzel shadow-lg flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-book-open"></i> BUKU TAMU
+                </button>
+            </div>
+        </div>
+
+        <!-- FOOTER INFO -->
+        <div class="py-4 bg-black/90 text-center border-t border-yellow-500/20 text-xs text-gray-400">
+            <p>Mohon konfirmasi kehadiran sebelum 5 Oktober 2026</p>
+            <p class="text-[10px] text-gray-500 mt-1">Undangan berlaku untuk 2 orang • Lions Club Makassar Host</p>
+        </div>
+    </div>
+
+    <!-- LOCAL MP4 AUDIO ELEMENT (LOOP) -->
+    <audio id="bg-audio" loop>
+        <source src="musiksaya.mp4" type="audio/mp4">
+    </audio>
+
+    <!-- FLOATING MUSIC BUTTON -->
+    <button id="music-toggle" onclick="toggleMusic()" class="fixed bottom-6 right-6 z-50 w-12 h-12 bg-yellow-500 text-black rounded-full shadow-2xl flex items-center justify-center border-2 border-white hover:scale-110 transition-all hidden">
+        <i id="music-icon" class="fa-solid fa-music animate-spin"></i>
+    </button>
+
+    <!-- RSVP MODAL -->
+    <div id="rsvp-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left">
+            <button onclick="closeModal('rsvp-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4">RSVP / E-Ticket Kehadiran</h3>
+            <form onsubmit="submitRSVP(event)" class="space-y-3">
+                <div>
+                    <label class="text-xs text-gray-400">Nama Lengkap</label>
+                    <input type="text" id="rsvp-name" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                </div>
+                <div>
+                    <label class="text-xs text-gray-400">Jumlah Hadir</label>
+                    <select id="rsvp-count" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                        <option value="1 Orang">1 Orang</option>
+                        <option value="2 Orang">2 Orang (Sesuai Ketentuan)</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="text-xs text-gray-400">Status Kehadiran</label>
+                    <select id="rsvp-status" class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                        <option value="Hadir">Hadir</option>
+                        <option value="Berhalangan">Berhalangan Hadir</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-2">GENERATE E-TICKET</button>
+            </form>
+            <div id="e-ticket-result" class="mt-4 hidden p-3 bg-neutral-900 border border-yellow-500/50 rounded-xl text-center">
+                <p class="text-xs text-yellow-400 font-bold uppercase">E-Ticket Berhasil Dibuat!</p>
+                <p id="ticket-info" class="text-xs text-gray-300 mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- GUESTBOOK MODAL -->
+    <div id="guestbook-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="gold-card max-w-md w-full p-6 rounded-2xl relative text-left">
+            <button onclick="closeModal('guestbook-modal')" class="absolute top-4 right-4 text-gray-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+            <h3 class="text-lg font-bold font-cinzel gold-gradient-text mb-4">Buku Tamu & Ucapan</h3>
+            <form onsubmit="submitWish(event)" class="space-y-3">
+                <div>
+                    <label class="text-xs text-gray-400">Nama</label>
+                    <input type="text" id="wish-name" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400">
+                </div>
+                <div>
+                    <label class="text-xs text-gray-400">Ucapan & Doa</label>
+                    <textarea id="wish-msg" rows="3" required class="w-full bg-black/60 border border-yellow-500/30 rounded-xl px-3 py-2 text-white text-sm focus:outline-none focus:border-yellow-400"></textarea>
+                </div>
+                <button type="submit" class="w-full py-2.5 bg-yellow-500 text-black font-bold rounded-xl text-xs font-cinzel tracking-wider mt-2">KIRIM UCAPAN</button>
+            </form>
+            <div id="wishes-list" class="mt-4 max-h-40 overflow-y-auto space-y-2 pr-1 text-xs">
+                <div class="p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl">
+                    <p class="font-bold text-yellow-400">Lion Andi & Keluarga</p>
+                    <p class="text-gray-300 mt-0.5">Selamat Milad ke-33 Lions Club Makassar Host. Sukses selalu dan semakin berjaya dalam pengabdian!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // FITUR DINAMIS NAMA TAMU DARI URL PARAMETER (contoh: ?to=Ali)
+        window.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const guestParam = urlParams.get('to');
+            
+            if (guestParam) {
+                const formattedName = decodeURIComponent(guestParam).replace(/\b\w/g, l => l.toUpperCase());
+                document.getElementById('guest-name-cover').innerText = formattedName;
+                document.getElementById('guest-name-content').innerText = formattedName;
+                document.getElementById('rsvp-name').value = formattedName;
+                document.getElementById('wish-name').value = formattedName;
+            }
+        });
+
+        // COUNTDOWN TIMER KE 9 OKTOBER 2026 18:00 WITA
+        const eventDate = new Date("October 9, 2026 18:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = eventDate - now;
+            if (diff > 0) {
+                document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000);
+            }
+        }, 1000);
+
+        // BUKA UNDANGAN & PUTAR AUDIO MP4 LOKAL
+        let isPlaying = false;
+        const audioEl = document.getElementById('bg-audio');
+
+        function openInvitation() {
+            document.getElementById('welcome-screen').style.opacity = '0';
+            setTimeout(() => {
+                document.getElementById('welcome-screen').style.display = 'none';
+                document.getElementById('main-content').classList.remove('hidden');
+                document.getElementById('music-toggle').classList.remove('hidden');
+                
+                // Play audio lokal musiksaya.mp4
+                audioEl.play().then(() => {
+                    isPlaying = true;
+                }).catch(error => {
+                    console.log("Autoplay dibatasi browser, silakan klik tombol musik manual.");
+                    isPlaying = false;
+                    document.getElementById('music-icon').classList.remove('animate-spin', 'fa-music');
+                    document.getElementById('music-icon').classList.add('fa-play');
+                });
+            }, 700);
+        }
+
+        // TOGGLE MUSIC PLAY / PAUSE
+        function toggleMusic() {
+            const icon = document.getElementById('music-icon');
+            if (isPlaying) {
+                audioEl.pause();
+                icon.classList.remove('animate-spin', 'fa-music');
+                icon.classList.add('fa-play');
+                isPlaying = false;
+            } else {
+                audioEl.play();
+                icon.classList.remove('fa-play');
+                icon.classList.add('animate-spin', 'fa-music');
+                isPlaying = true;
+            }
+        }
+
+        // MODAL CONTROLS
+        function openModal(id) { document.getElementById(id).classList.remove('hidden'); }
+        function closeModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+        // RSVP SUBMISSION HANDLER
+        function submitRSVP(e) {
+            e.preventDefault();
+            const name = document.getElementById('rsvp-name').value;
+            const count = document.getElementById('rsvp-count').value;
+            const status = document.getElementById('rsvp-status').value;
+            
+            document.getElementById('ticket-info').innerHTML = `<b>${name}</b> (${count})<br>Status: <b>${status}</b><br><span class='text-[10px] text-yellow-400'>ID E-Ticket: LCMH-2026-${Math.floor(Math.random()*90000+10000)}</span>`;
+            document.getElementById('e-ticket-result').classList.remove('hidden');
+        }
+
+        // GUESTBOOK WISHES SUBMISSION
+        function submitWish(e) {
+            e.preventDefault();
+            const name = document.getElementById('wish-name').value;
+            const msg = document.getElementById('wish-msg').value;
+            
+            const list = document.getElementById('wishes-list');
+            const newWish = document.createElement('div');
+            newWish.className = "p-2.5 bg-black/40 border border-yellow-500/10 rounded-xl";
+            newWish.innerHTML = `<p class="font-bold text-yellow-400">${name}</p><p class="text-gray-300 mt-0.5">${msg}</p>`;
+            list.prepend(newWish);
+            
+            document.getElementById('wish-msg').value = '';
+            alert("Ucapan berhasil dikirim!");
+        }
+    </script>
+</body>
+</html>
